@@ -21,7 +21,12 @@ function CertificationsInit() {
 
     seeded.current = true;
     actor
-      .addCertification("Data Analytics with AI", "", "27 June, 2025", null)
+      .addCertification(
+        "Data Analytics with AI",
+        "SoloLearn",
+        "27 June, 2025",
+        null,
+      )
       .then(() => {
         localStorage.setItem(CERTS_SEEDED_KEY, "true");
         queryClient.invalidateQueries({ queryKey: ["certifications"] });
